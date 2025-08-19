@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Заявка успешно отправлена | Кузнецов и Партнеры</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berlingske+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="headermain">
+            <img src="{% static 'images/header4.svg' %}" alt="Логотип Кузнецов и Партнеры" width="200px">
+            <h6 class="headermaintext">КУЗНЕЦОВ И ПАРТНЕРЫ</h6>
+            <p class="headertext">О нас</p>
+            <p class="headertext">Услуги</p>
+            <p class="headertext">Наша практика</p>
+            <p class="headerphone">8 (930) 969 - 23 - 54</p>
+        </div>
+    </header>
+
+    <div class="success-container">
+        <div class="success-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <h1>Ваша заявка успешно отправлена!</h1>
+            <p>Мы получили ваши данные и свяжемся с вами в ближайшее время для бесплатной консультации.</p>
+
+            <div class="success-details">
+                <div class="detail-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>Ожидайте звонка в течение 15 минут</span>
+                </div>
+
+                <div class="detail-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>На указанную почту придет письмо с подтверждением</span>
+                </div>
+            </div>
+
+            <div class="success-actions">
+                <a href="{% url 'index' %}" class="btn-back">Вернуться на главную</a>
+                <a href="tel:89309692354" class="btn-call">Позвонить нам сейчас</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footermain">
+           <h6 class="footermaintext">КУЗНЕЦОВ И ПАРТНЕРЫ</h6>
+           <div class="footerblocks">
+                <div class="footerblock1">
+                    <div class="block11">
+                        <p class="footertext">©2025. Все права защищены.</p>
+                        <p class="footertext">Юридическая компания  «Кузнецов и партнеры»</p>
+                    </div>
+                    <div class="block12">
+                        <p class="footertext">ИП Кузнецов М.О.</p>
+                        <p class="footertext">ИНН: 775100152345</p>
+                        <p class="footertext">ОГРН: 323774600339472</p>
+                        <p class="footertext">Р/с 40802810001360000356 в АО «АЛЬФА-БАНК»</p>
+                        <p class="footertext">БИК: 044525593 </p>
+                        <p class="footertext">К/с: 30101810200000000593</p>
+                    </div>
+                </div>
+                <div class="footerblock2">
+                    <div class="block21">
+                        <p class="footertext">Офис: </p>
+                        <p class="footertext">г. Москва, ул. Щипок, дом 22, стр. 2</p>
+                    </div>
+                    <div class="block22">
+                        <p class="block22text"><img src="{% static 'images/phone.svg' %}" alt="Телефон" class="block22img">8 (930) 969 - 23 - 54</p>
+                        <p class="block22text"><img src="{% static 'images/mail.svg' %}" alt="Почта" class="block22img">k-m-gov@bk.ru</p>
+                    </div>
+                    <div class="block23">
+                        <a href="{% url 'privacy_policy' %}" class="footertext">Политика конфиденциальности</a>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </footer>
+</body>
+</html>
