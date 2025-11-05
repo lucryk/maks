@@ -117,9 +117,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',      # Глобальная папка static
-    BASE_DIR / 'mainapp/static',  # Папка static в приложении
-]
+    BASE_DIR / 'static',]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type

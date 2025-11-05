@@ -1,19 +1,19 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Кузнецов и Партнеры - Юридическая защита</title>
+    <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Berlingske+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="csrf-token" content="{{ csrf_token }}">
 </head>
 <body>
     <header>
         <div class="headermain">
-            <img src="{% static 'images/header4.svg' %}" alt="Логотип Кузнецов и Партнеры" width="200px" class="headerimg">
+            <img src="{% static 'images/header4.svg' %}" alt="" width="200px" class="headerimg">
             <a href="#"><h6 class="headermaintext">КУЗНЕЦОВ И ПАРТНЕРЫ</h6></a>
             <a href="#aboutus"><p class="headertext">О нас</p></a>
             <a href="#yslygi"><p class="headertext">Услуги</p></a>
@@ -21,21 +21,6 @@
             <p class="headerphone">8 (930) 969 - 23 - 54</p>
         </div>
     </header>
-
-    <!-- Модальное окно для заявки -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Оставить заявку</h3>
-            <form id="modal-form" method="post" action="{% url 'index' %}">
-                {% csrf_token %}
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Ваша почта" required>
-                <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                <button type="submit">Отправить</button>
-            </form>
-        </div>
-    </div>
 
     <div class="main1">
         <h3 class="main1maintext">
@@ -45,16 +30,16 @@
         <div class="main1blocks">
             <div class="main1block1">
                 <p class="main1block1text">Представим Ваши интересы, и <b>добьемся отмены решения ФАС</b> о внесении в РНП — <b>без рисков и убытков</b> для Вас и Вашей компании, <b>независимо от сложности ситуации</b></p>
-                <a href="#zayavka" class="main1block1link open-modal"><img src="{% static 'images/acceptbutton.svg' %}" alt="Оставить заявку"></a>
+                <a href="#zayavka" class="main1block1link"><img src="{% static 'images/acceptbutton.svg'%}" alt=""></a>
             </div>
             <div class="main1block2">
-                <img src="{% static 'images/vesi.svg' %}" alt="Весы правосудия" width="600px">
+                <img src="images/vesi.svg" alt="" width="600px">
             </div>
         </div>
     </div>
 
     <div class="main2">
-        <h3 class="main2maintext"><img src="{% static 'images/Group.svg' %}" alt="">
+        <h3 class="main2maintext"><img src="images/Group.svg" alt="">
             <span class="text-green">ЧТО ТАКОЕ РНП,</span>
             <span class="text-gray"> И ПОЧЕМУ В НЕГО ЛУЧШЕ НЕ ПОПАДАТЬ</span>
         </h3>
@@ -63,28 +48,28 @@
             <div class="first-row">
                 <div class="consequence-block">
                     <div class="consequence-icon">
-                        <img src="{% static 'images/rnp/1.svg' %}" alt="Блокировка госзакупок">
+                        <img src="images/rnp/1.svg" alt="Блокировка госзакупок">
                     </div>
                     <p class="consequence-text"><b>Не сможете участвовать в госзакупках,</b> потеряв возможность заключать контракты и договоры <b>в течение 2-х лет</b></p>
                 </div>
 
                 <div class="consequence-block">
                     <div class="consequence-icon">
-                        <img src="{% static 'images/rnp/2.svg' %}" alt="Штраф">
+                        <img src="images/rnp/2.svg" alt="Штраф">
                     </div>
                     <p class="consequence-text"><b>Заплатите штраф</b> в размере <b>до 10%</b> от всей суммы контракта</p>
                 </div>
 
                 <div class="consequence-block">
                     <div class="consequence-icon">
-                        <img src="{% static 'images/rnp/3.svg' %}" alt="Банковское финансирование">
+                        <img src="images/rnp/3.svg" alt="Банковское финансирование">
                     </div>
                     <p class="consequence-text"><b>Лишитесь возможности</b> получать финансирование от банков: Вам будет <b>отказано в получении кредитов</b></p>
                 </div>
 
                 <div class="consequence-block">
                     <div class="consequence-icon">
-                        <img src="{% static 'images/rnp/4.svg' %}" alt="Потеря обеспечения">
+                        <img src="images/rnp/4.svg" alt="Потеря обеспечения">
                     </div>
                     <p class="consequence-text"><b>Можете потерять денежные средства,</b> внесенные в качестве обеспечения исполнения контракта</p>
                 </div>
@@ -93,21 +78,21 @@
             <div class="second-row">
                 <div class="consequence-block shifted-block">
                     <div class="consequence-icon">
-                        <img src="{% static 'images/rnp/5.svg' %}" alt="Риск банкротства">
+                        <img src="images/rnp/5.svg" alt="Риск банкротства">
                     </div>
                     <p class="consequence-text"><b>Испытаете риски</b> банкротства компании</p>
                 </div>
 
                 <div class="consequence-block shifted-block">
                     <div class="consequence-icon">
-                        <img src="{% static 'images/rnp/6.svg' %}" alt="Потеря репутации">
+                        <img src="images/rnp/6.svg" alt="Потеря репутации">
                     </div>
                     <p class="consequence-text"><b>Потеряете деловую репутацию,</b> восстановить которую будет <b>очень долго и непросто</b></p>
                 </div>
 
                 <div class="consequence-block shifted-block">
                     <div class="consequence-icon">
-                        <img src="{% static 'images/rnp/7.svg' %}" alt="Правовые последствия">
+                        <img src="images/rnp/7.svg" alt="Правовые последствия">
                     </div>
                     <p class="consequence-text"><b>Получите вероятность</b> административного или уголовного <b>преследования</b></p>
                 </div>
@@ -115,23 +100,23 @@
         </div>
         <div class="main2znak">
             <p class="main2text2">Итог включения в РНП всегда один — <b>финансовые и репутационные потери,</b> и привести к нему может целый ряд причин:</p>
-            <img src="{% static 'images/!.svg' %}" alt="">
+            <img src="images/!.svg" alt="">
         </div>
         <div class="main2infoblocks">
             <div class="infoblock">
-                <img src="{% static 'images/Component 43.svg' %}" alt="" class="infoimg">
+                <img src="images/Component 43.svg" alt="" class="infoimg">
             </div>
             <div class="infoblock">
-                <img src="{% static 'images/Component 44.svg' %}" alt="" class="infoimg">
+                <img src="images/Component 44.svg" alt="" class="infoimg">
             </div>
         </div>
         <div class="risk-container">
             <div class="risk-bg-wrapper">
-                <img src="{% static 'images/Component 45.svg' %}" alt="Фоновое изображение" class="risk-bg">
+                <img src="images/Component 45.svg" alt="Фоновое изображение" class="risk-bg">
             </div>
 
-            <a href="#zayavka" class="floating-btn open-modal">
-                <img src="{% static 'images/acceptbutton.svg' %}" alt="Получить консультацию" class="btn-image">
+            <a href="#zayavka" class="floating-btn">
+                <img src="images/acceptbutton.svg" alt="Получить консультацию" class="btn-image">
             </a>
         </div>
     </div>
@@ -158,41 +143,41 @@
                         <div class="option-card">
                             <input type="radio" name="service" id="service1" class="option-input" value="Защита от РНП">
                             <label for="service1" class="option-label">
-                                <img src="{% static 'images/kviz/image 6.svg' %}" alt="Защита от РНП">
+                                <img src="images/kviz/image 6.svg" alt="Защита от РНП">
                                 <span>Защита от РНП</span>
                             </label>
                         </div>
                         <div class="option-card">
                             <input type="radio" name="service" id="service2" class="option-input" value="Составить жалобу">
                             <label for="service2" class="option-label">
-                                <img src="{% static 'images/kviz/17342 1.svg' %}" alt="Составить жалобу">
+                                <img src="images/kviz/17342 1.svg" alt="Составить жалобу">
                                 <span>Составить жалобу</span>
                             </label>
                         </div>
                         <div class="option-card">
                             <input type="radio" name="service" id="service3" class="option-input" value="Досудебное урегулирование">
                             <label for="service3" class="option-label">
-                                <img src="{% static 'images/kviz/4198 1.svg' %}" alt="Досудебное урегулирование">
+                                <img src="images/kviz/4198 1.svg" alt="Досудебное урегулирование">
                                 <span>Досудебное урегулирование</span>
                             </label>
                         </div>
                         <div class="option-card">
                             <input type="radio" name="service" id="service4" class="option-input" value="Судебное представительство">
                             <label for="service4" class="option-label">
-                                <img src="{% static 'images/kviz/2149443471 1.svg' %}" alt="Судебное представительство">
+                                <img src="images/kviz/2149443471 1.svg" alt="Судебное представительство">
                                 <span>Судебное представительство</span>
                             </label>
                         </div>
                     </div>
                     <div class="kviz-navigation">
-                        <button class="nav-btn" disabled><img src="{% static 'images/kviz/nazad.svg' %}" alt="Назад"></button>
-                        <button class="nav-btn next-btn"><img src="{% static 'images/kviz/dalee.svg' %}" alt="Далее"></button>
+                        <button class="nav-btn" disabled><img src="images/kviz/nazad.svg" alt="Назад"></button>
+                        <button class="nav-btn next-btn"><img src="images/kviz/dalee.svg" alt="Далее"></button>
                     </div>
                 </div>
 
                 <div class="kvizblok" data-step="2">
                     <p class="kvizmaintext">ПО КАКОМУ ЗАКОНУ У ВАС КОНТРАКТ?</p>
-                    <div class="content-centered">
+                    <div class="content-centered"> <!-- Добавил обертку для центрирования содержимого -->
                         <div class="radio-options">
                             <label class="radio-option">
                                 <input type="radio" name="law" value="44-ФЗ">
@@ -213,22 +198,24 @@
                         </div>
                     </div>
                     <div class="kviz-navigation">
-                        <button class="nav-btn prev-btn"><img src="{% static 'images/kviz/nazad.svg' %}" alt="Назад"></button>
-                        <button class="nav-btn next-btn"><img src="{% static 'images/kviz/dalee.svg' %}" alt="Далее"></button>
+                        <button class="nav-btn prev-btn"><img src="images/kviz/nazad.svg" alt="Назад"></button>
+                        <button class="nav-btn next-btn"><img src="images/kviz/dalee.svg" alt="Далее"></button>
                     </div>
                 </div>
 
+                <!-- Блок 3: Номер закупки -->
                 <div class="kvizblok" data-step="3">
                     <p class="kvizmaintext">УКАЖИТЕ НОМЕР ЗАКУПКИ ИЛИ ИНН</p>
                     <div class="input-field">
                         <input type="text" placeholder="Номер закупки или ИНН:">
                     </div>
                     <div class="kviz-navigation">
-                        <button class="nav-btn prev-btn"><img src="{% static 'images/kviz/nazad.svg' %}" alt="Назад"></button>
-                        <button class="nav-btn next-btn"><img src="{% static 'images/kviz/dalee.svg' %}" alt="Далее"></button>
+                        <button class="nav-btn prev-btn"><img src="images/kviz/nazad.svg" alt="Назад"></button>
+                        <button class="nav-btn next-btn"><img src="images/kviz/dalee.svg" alt="Далее"></button>
                     </div>
                 </div>
 
+                <!-- Блок 4: Регион -->
                 <div class="kvizblok" data-step="4">
                     <p class="kvizmaintext">ВАШ РЕГИОН</p>
                     <div class="radio-options region-options">
@@ -266,11 +253,12 @@
                         </label>
                     </div>
                     <div class="kviz-navigation">
-                        <button class="nav-btn prev-btn"><img src="{% static 'images/kviz/nazad.svg' %}" alt="Назад"></button>
-                        <button class="nav-btn next-btn"><img src="{% static 'images/kviz/dalee.svg' %}" alt="Далее"></button>
+                        <button class="nav-btn prev-btn"><img src="images/kviz/nazad.svg" alt="Назад"></button>
+                        <button class="nav-btn next-btn"><img src="images/kviz/dalee.svg" alt="Далее"></button>
                     </div>
                 </div>
 
+                <!-- Блок 5: Контакты -->
                 <div class="kvizblok" data-step="5">
                     <p class="kvizmaintextlast">ОСТАВЬТЕ КОНТАКТЫ</p>
                     <div class="input-field">
@@ -279,8 +267,8 @@
                     <div class="input-field">
                         <input type="tel" placeholder="Номер телефона:">
                     </div>
-                    <button class="submit-btn open-modal">
-                        <img src="{% static 'images/acceptbutton.svg' %}" alt="Получить консультацию">
+                    <button class="submit-btn">
+                        <img src="images/acceptbutton.svg" alt="Получить консультацию">
                     </button>
                 </div>
             </div>
@@ -295,27 +283,27 @@
         <p class="main4text">Мы — юридическая компания <b>«Кузнецов и партнеры»</b>. Специализируемся на вопросах, связанных с антимонопольным законодательством, и за <b>9+ лет практики</b> стали лидерами в этой отрасли благодаря <b>глубокой экспертизе и индивидуальному подходу</b></p>
         <div class="main4blocks">
             <div class="main4block">
-                <img src="{% static 'images/circles/1.svg' %}" alt="" class="block4img">
+                <img src="images/circles/1.svg" alt="" class="block4img">
                 <p class="block4text">Точно знаем, какое решение будет <b>максимально эффективным,</b> опираясь <b>на знания и реальный опыт</b></p>
             </div>
             <div class="main4block">
-                <img src="{% static 'images/circles/2.svg' %}" alt="" class="block4img">
+                <img src="images/circles/2.svg" alt="" class="block4img">
                 <p class="block4text"><b>Ценим</b> каждого нашего доверителя, и всегда отстаиваем интересы <b>качественно и бескомпромиссно</b></p>
             </div>
             <div class="main4block">
-                <img src="{% static 'images/circles/3.svg' %}" alt="" class="block4img">
+                <img src="images/circles/3.svg" alt="" class="block4img">
                 <p class="block4text"><b>Экономим Ваше время,</b> так как работаем оперативно, грамотно разбивая работу на <b>этапы</b></p>
             </div>
             <div class="main4block">
-                <img src="{% static 'images/circles/4.svg' %}" alt="" class="block4img">
+                <img src="images/circles/4.svg" alt="" class="block4img">
                 <p class="block4text">Имеем <b>высокую квалификацию,</b> и гарантируем <b>прозрачность работы</b> и достижение <b>положительного результата</b></p>
             </div>
             <div class="main4block">
-                <img src="{% static 'images/circles/5.svg' %}" alt="" class="block4img">
+                <img src="images/circles/5.svg" alt="" class="block4img">
                 <p class="block4text"><b>Широкий спектр</b> оказываемых услуг: от защиты до получения лицензий и сертификации. Работаем <b>«под ключ»</b></p>
             </div>
             <div class="main4block">
-                <img src="{% static 'images/circles/6.svg' %}" alt="" class="block4img">
+                <img src="images/circles/6.svg" alt="" class="block4img">
                 <p class="block4text">Много <b>довольных клиентов</b> по всей России</p>
             </div>
         </div>
@@ -331,77 +319,81 @@
        <div class="services-grid">
             <div class="service-card">
                 <div class="image-container">
-                    <img src="{% static 'images/yslygi/1.svg' %}" alt="Защита от РНП" class="service-image">
-                    <a href="#zayavka" class="open-modal"><button class="service-btn">оставить заявку</button></a>
+                    <img src="images/yslygi/1.svg" alt="Защита от РНП" class="service-image">
+                    <a href="#zayavka"><button class="service-btn">оставить заявку</button></a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="image-container">
-                    <img src="{% static 'images/yslygi/2.svg' %}" alt="Обжалование" class="service-image">
-                    <a href="#zayavka" class="open-modal"><button class="service-btn">оставить заявку</button></a>
+                    <img src="images/yslygi/2.svg" alt="Обжалование" class="service-image">
+                    <a href="#zayavka"><button class="service-btn">оставить заявку</button></a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="image-container">
-                    <img src="{% static 'images/yslygi/3.svg' %}" alt="Судебное представительство" class="service-image">
-                    <a href="#zayavka" class="open-modal"><button class="service-btn">оставить заявку</button></a>
+                    <img src="images/yslygi/3.svg" alt="Судебное представительство" class="service-image">
+                    <a href="#zayavka"><button class="service-btn">оставить заявку</button></a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="image-container">
-                    <img src="{% static 'images/yslygi/4.svg' %}" alt="Сопровождение" class="service-image">
-                    <a href="#zayavka" class="open-modal"><button class="service-btn">оставить заявку</button></a>
+                    <img src="images/yslygi/4.svg" alt="Сопровождение" class="service-image">
+                    <a href="#zayavka"><button class="service-btn">оставить заявку</button></a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="image-container">
-                    <img src="{% static 'images/yslygi/5.svg' %}" alt="Защита бизнеса" class="service-image">
-                    <a href="#zayavka" class="open-modal"><button class="service-btn">оставить заявку</button></a>
+                    <img src="images/yslygi/5.svg" alt="Защита бизнеса" class="service-image">
+                    <a href="#zayavka"><button class="service-btn">оставить заявку</button></a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="image-container">
-                    <img src="{% static 'images/yslygi/6.svg' %}" alt="Консультация" class="service-image">
-                    <a href="#zayavka" class="open-modal"><button class="service-btn">оставить заявку</button></a>
+                    <img src="images/yslygi/6.svg" alt="Консультация" class="service-image">
+                    <a href="#zayavka"><button class="service-btn">оставить заявку</button></a>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="main6">
         <h3 class="main6maintext">ПРАЙС-ЛИСТ</h3>
         <p class="main6text">Окончательная стоимость услуг определяется персонально <b>после полного анализа Вашей ситуации</b></p>
         <div class="main6blocks">
+
             <button class="block6button slider-btn price-prev-btn">
-                <img src="{% static 'images/buttonleft.svg' %}" alt="Предыдущий слайд" class="block6img">
+                <img src="images/buttonleft.svg" alt="Предыдущий слайд" class="block6img">
             </button>
 
             <div class="slider-container">
                 <div class="slider-track">
-                    <img src="{% static 'images/price/Component 22.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 23.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 24.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 25.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 26.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 27.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 28.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 29.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 30.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Component 31.svg' %}" alt="" class="block6imgs slide">
-                    <img src="{% static 'images/price/Group 1000002899.svg' %}" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 22.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 23.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 24.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 25.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 26.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 27.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 28.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 29.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 30.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Component 31.svg" alt="" class="block6imgs slide">
+                    <img src="images/price/Group 1000002899.svg" alt="" class="block6imgs slide">
                 </div>
             </div>
 
+
             <button class="block6button slider-btn price-next-btn">
-                <img src="{% static 'images/buttonright.svg' %}" alt="Следующий слайд" class="block6img">
+                <img src="images/buttonright.svg" alt="Следующий слайд" class="block6img">
             </button>
         </div>
-        <a href="#zayavka" class="open-modal"><img src="{% static 'images/acceptbutton.svg' %}" alt="" class="acceptbutton6"></a>
+        <a href="#zayavka"><img src="images/acceptbutton.svg" alt="" class="acceptbutton6"></a>
+
     </div>
 
     <div class="main7">
@@ -412,27 +404,28 @@
         <p class="main7text"><b>Процесс работы</b> будет строиться следующим образом:</p>
         <div class="main7blocks">
             <div class="block7">
-                <img src="{% static 'images/numbers/1.svg' %}" alt="" class="block7img">
+                <img src="images/numbers/1.svg" alt="" class="block7img">
                 <p class="block7text">Вы делаете важный первый шаг — оставляете заявку на бесплатную консультацию</p>
             </div>
             <div class="block7">
-                <img src="{% static 'images/numbers/2.svg' %}" alt="" class="block7img">
+                <img src="images/numbers/2.svg" alt="" class="block7img">
                 <p class="block7text">Проводим бесплатную предварительную консультацию в режиме онлайн</p>
             </div>
             <div class="block7">
-                <img src="{% static 'images/numbers/3.svg' %}" alt="" class="block7img">
+                <img src="images/numbers/3.svg" alt="" class="block7img">
                 <p class="block7text">Мы анализируем ситуацию, определяем задачи, согласовываем сроки и стоимость</p>
             </div>
             <div class="block7">
-                <img src="{% static 'images/numbers/4.svg' %}" alt="" class="block7img">
+                <img src="images/numbers/4.svg" alt="" class="block7img">
                 <p class="block7text">Заключаем договор на оказание юридических услуг. Решаем вопрос с оплатой</p>
             </div>
             <div class="block7">
-                <img src="{% static 'images/numbers/5.svg' %}" alt="" class="block7img">
+                <img src="images/numbers/5.svg" alt="" class="block7img">
                 <p class="block7text">Мы выполняем поставленные задачи. Вы получаете результат</p>
             </div>
         </div>
-        <a href="#zayavka" class="open-modal"><button type="submit" class="block7link">оставить заявку</button></a>
+        <a href="#zayavka"><button type="submit" class="block7link">оставить заявку</button></a>
+
     </div>
 
     <div class="main8" id="work">
@@ -443,113 +436,113 @@
         <p class="main8text">Имеем <b>подтвержденную</b> судебную практику и <b>благодарственные</b> письма от наших доверителей</p>
         <div class="cases-slider">
             <button class="cases-btn cases-prev">
-                <img src="{% static 'images/buttonleft.svg' %}" alt="Предыдущий кейс">
+                <img src="images/buttonleft.svg" alt="Предыдущий кейс">
             </button>
 
             <div class="cases-container">
                 <div class="cases-track">
-                    <img src="{% static 'images/work/1.jpg' %}" alt="Кейс 1" class="cases-slide">
-                    <img src="{% static 'images/work/2.jpg' %}" alt="Кейс 2" class="cases-slide">
-                    <img src="{% static 'images/work/3.jpg' %}" alt="Кейс 3" class="cases-slide">
-                    <img src="{% static 'images/work/4.jpg' %}" alt="Кейс 4" class="cases-slide">
-                    <img src="{% static 'images/work/5.jpg' %}" alt="Кейс 5" class="cases-slide">
-                    <img src="{% static 'images/work/6.jpg' %}" alt="Кейс 6" class="cases-slide">
-                    <img src="{% static 'images/work/7.jpg' %}" alt="Кейс 7" class="cases-slide">
-                    <img src="{% static 'images/work/8.jpg' %}" alt="Кейс 8" class="cases-slide">
-                    <img src="{% static 'images/work/9.svg' %}" alt="Кейс 9" class="cases-slide">
+                    <img src="images/work/1.jpg" alt="Кейс 1" class="cases-slide">
+                    <img src="images/work/2.jpg" alt="Кейс 2" class="cases-slide">
+                    <img src="images/work/3.jpg" alt="Кейс 3" class="cases-slide">
+                    <img src="images/work/4.jpg" alt="Кейс 4" class="cases-slide">
+                    <img src="images/work/5.jpg" alt="Кейс 5" class="cases-slide">
+                    <img src="images/work/6.jpg" alt="Кейс 6" class="cases-slide">
+                    <img src="images/work/7.jpg" alt="Кейс 7" class="cases-slide">
+                    <img src="images/work/8.jpg" alt="Кейс 8" class="cases-slide">
+                    <img src="images/work/9.svg" alt="Кейс 9" class="cases-slide">
                 </div>
             </div>
 
             <button class="cases-btn cases-next">
-                <img src="{% static 'images/buttonright.svg' %}" alt="Следующий кейс">
+                <img src="images/buttonright.svg" alt="Следующий кейс">
             </button>
         </div>
         <p class="main8text"><b>Видео</b> с оглашением решений ФАС</p>
         <div class="video-carousel-container">
             <div class="video-carousel-track">
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/lipeck.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/lipeck.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">решение об отказе включения в рнп</h6>
                     <p class="video-location">Липецкое УФАС</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/piter.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/piter.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">РНП. расторжение контракта</h6>
                     <p class="video-location">г. Санкт-Петербург</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/moskva.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/moskva.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">реестр недобросовестных поставщиков</h6>
                     <p class="video-location">г. Москва</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/mskobl.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/mskobl.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">реестр недобросовестных поставщиков</h6>
                     <p class="video-location">Московская область</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/bashk.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/bashk.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">Жалоба</h6>
                     <p class="video-location">Республика Башкортостан</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/chu.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/chu.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">реестр недобросовестных поставщиков</h6>
                     <p class="video-location">Республика Чувашия</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/yakut.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/yakut.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">реестр недобросовестных поставщиков</h6>
                     <p class="video-location">Якутское УФАС</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/krim.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/krim.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">реестр недобросовестных поставщиков</h6>
                     <p class="video-location">Республика Крым</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/kursk.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/kursk.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">реестр недобросовестных поставщиков</h6>
                     <p class="video-location">Курская область</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/russia.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/russia.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">жалоба</h6>
                     <p class="video-location">ФАС России</p>
                 </div>
                 <div class="video-block">
-                    <video class="video-player" controls poster="{% static 'video/poster.jpg' %}">
-                        <source src="{% static 'video/pskov.mp4' %}" type="video/mp4">
+                    <video class="video-player" controls poster="path-to-poster-image.jpg">
+                        <source src="video/pskov.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <h6 class="video-title">Росграница</h6>
@@ -569,32 +562,32 @@
             <div class="logos-carousel-track">
                 <div class="logo-block">
                     <div class="logo-img-container">
-                        <img src="{% static 'images/companies/Component 11.png' %}" alt="Бизнес-Омоложка" class="logo-img">
+                        <img src="images/companies/Component 11.png" alt="Бизнес-Омоложка" class="logo-img">
                     </div>
                 </div>
                 <div class="logo-block">
                     <div class="logo-img-container">
-                        <img src="{% static 'images/companies/Component 12.png' %}" alt="Электронный аудитор" class="logo-img">
+                        <img src="images/companies/Component 12.png" alt="Электронный аудитор" class="logo-img">
                     </div>
                 </div>
                 <div class="logo-block">
                     <div class="logo-img-container">
-                        <img src="{% static 'images/companies/Component 13.svg' %}" alt="НОСТРОЙ" class="logo-img">
+                        <img src="images/companies/Component 13.svg" alt="НОСТРОЙ" class="logo-img">
                     </div>
                 </div>
                 <div class="logo-block">
                     <div class="logo-img-container">
-                        <img src="{% static 'images/companies/Component 14.svg' %}" alt="НАЦИОНАЛЬНОЕ" class="logo-img">
+                        <img src="images/companies/Component 14.svg" alt="НАЦИОНАЛЬНОЕ" class="logo-img">
                     </div>
                 </div>
                 <div class="logo-block">
                     <div class="logo-img-container">
-                        <img src="{% static 'images/companies/Component 15.svg' %}" alt="ТПП РФ" class="logo-img">
+                        <img src="images/companies/Component 15.svg" alt="ТПП РФ" class="logo-img">
                     </div>
                 </div>
                 <div class="logo-block">
                     <div class="logo-img-container">
-                        <img src="{% static 'images/companies/Component 16.svg' %}" alt="СОЛАГМАН" class="logo-img">
+                        <img src="images/companies/Component 16.svg" alt="СОЛАГМАН" class="logo-img">
                     </div>
                 </div>
             </div>
@@ -611,8 +604,8 @@
                 <div class="faq-question">
                     <p class="faq-title">Какие предоставляете гарантии?</p>
                     <button class="faq-toggle">
-                        <img src="{% static 'images/Vector.svg' %}" alt="Развернуть" class="faq-icon faq-arrow-down">
-                        <img src="{% static 'images/Vector2.svg' %}" alt="Свернуть" class="faq-icon faq-arrow-up">
+                        <img src="images/Vector.svg" alt="Развернуть" class="faq-icon faq-arrow-down">
+                        <img src="images/Vector2.svg" alt="Свернуть" class="faq-icon faq-arrow-up">
                     </button>
                 </div>
                 <div class="faq-answer">
@@ -624,8 +617,8 @@
                 <div class="faq-question">
                     <p class="faq-title">Сколько времени займет оказание услуги?</p>
                     <button class="faq-toggle">
-                        <img src="{% static 'images/Vector.svg' %}" alt="Развернуть" class="faq-icon faq-arrow-down">
-                        <img src="{% static 'images/Vector2.svg' %}" alt="Свернуть" class="faq-icon faq-arrow-up">
+                        <img src="images/Vector.svg" alt="Развернуть" class="faq-icon faq-arrow-down">
+                        <img src="images/Vector2.svg" alt="Свернуть" class="faq-icon faq-arrow-up">
                     </button>
                 </div>
                 <div class="faq-answer">
@@ -637,8 +630,8 @@
                 <div class="faq-question">
                     <p class="faq-title">Можно найти услуги дешевле. Почему я должен выбрать вас?</p>
                     <button class="faq-toggle">
-                        <img src="{% static 'images/Vector.svg' %}" alt="Развернуть" class="faq-icon faq-arrow-down">
-                        <img src="{% static 'images/Vector2.svg' %}" alt="Свернуть" class="faq-icon faq-arrow-up">
+                        <img src="images/Vector.svg" alt="Развернуть" class="faq-icon faq-arrow-down">
+                        <img src="images/Vector2.svg" alt="Свернуть" class="faq-icon faq-arrow-up">
                     </button>
                 </div>
                 <div class="faq-answer">
@@ -650,8 +643,8 @@
                 <div class="faq-question">
                     <p class="faq-title">Чем вы отличаетесь от других юристов?</p>
                     <button class="faq-toggle">
-                        <img src="{% static 'images/Vector.svg' %}" alt="Развернуть" class="faq-icon faq-arrow-down">
-                        <img src="{% static 'images/Vector2.svg' %}" alt="Свернуть" class="faq-icon faq-arrow-up">
+                        <img src="images/Vector.svg" alt="Развернуть" class="faq-icon faq-arrow-down">
+                        <img src="images/Vector2.svg" alt="Свернуть" class="faq-icon faq-arrow-up">
                     </button>
                 </div>
                 <div class="faq-answer">
@@ -666,8 +659,8 @@
                 <div class="faq-question">
                     <p class="faq-title">Сколько я сэкономлю, обратившись к вам?</p>
                     <button class="faq-toggle">
-                        <img src="{% static 'images/Vector.svg' %}" alt="Развернуть" class="faq-icon faq-arrow-down">
-                        <img src="{% static 'images/Vector2.svg' %}" alt="Свернуть" class="faq-icon faq-arrow-up">
+                        <img src="images/Vector.svg" alt="Развернуть" class="faq-icon faq-arrow-down">
+                        <img src="images/Vector2.svg" alt="Свернуть" class="faq-icon faq-arrow-up">
                     </button>
                 </div>
                 <div class="faq-answer">
@@ -678,6 +671,7 @@
                 </div>
             </div>
         </div>
+        <img src="" alt="">
     </div>
 
     <div class="main11" id="zayavka">
@@ -687,29 +681,28 @@
         </h1>
         <div class="main11blocks">
             <div class="block11area">
-                <img src="{% static 'images/strelkivniz.svg' %}" alt="" class="main11img">
-                <form id="info-form" class="info-form" method="post" action="{% url 'index' %}">
-                    {% csrf_token %}
+                <img src="images/strelkivniz.svg" alt="" class="main11img">
+                <form id="info-form" class="info-form">
                     <div class="input-group">
-                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                        <input type="text" id="name" placeholder="Ваше имя">
                     </div>
 
                     <div class="input-group">
-                        <input type="email" id="email" name="email" placeholder="Ваша почта" required>
+                        <input type="email" id="email" placeholder="Ваша почту">
                     </div>
 
                     <div class="input-group">
                         <div class="phone-input">
-                            <input type="tel" id="phone" name="phone" class="phone-field" placeholder="+7 (999) 999-99-99" required>
+                            <input type="tel" id="phone" class="phone-field" placeholder="+ 7 (999) 999-99-99" required>
                         </div>
                     </div>
 
                     <button type="submit">Отправить заявку</button>
-                    <p class="areatext">Нажимая на кнопку, Вы соглашаетесь с условиями <a href="{% url 'privacy_policy' %}" style="text-decoration: underline;">Политики конфиденциальности</a></p>
+                    <p class="areatext">Нажимая на кнопку, Вы соглашаетесь с условиями <u>Политики конфиденциальности</u></p>
                 </form>
             </div>
             <div class="block11imgs">
-                <img src="{% static 'images/molotok.svg' %}" alt="" class="block11img">
+                <img src="images/molotok.svg" alt="" class="block11img">
             </div>
         </div>
     </div>
@@ -738,18 +731,16 @@
                         <p class="footertext">г. Москва, ул. Щипок, дом 22, стр. 2</p>
                     </div>
                     <div class="block22">
-                        <p class="block22text"><img src="{% static 'images/phone.svg' %}" alt="Телефон" class="block22img">8 (930) 969 - 23 - 54</p>
-                        <p class="block22text"><img src="{% static 'images/mail.svg' %}" alt="Почта" class="block22img">k-m-gov@bk.ru</p>
+                        <p class="block22text"><img src="images/phone.svg" alt="" class="block22img">8 (930) 969 - 23 - 54</p>
+                        <p class="block22text"><img src="images/mail.svg" alt="" class="block22img">k-m-gov@bk.ru</p>
                     </div>
                     <div class="block23">
-                        <a href="{% url 'privacy_policy' %}" class="footertext">Политика конфиденциальности</a>
+                        <p class="footertext">Политика конфиденциальности</p>
                     </div>
                 </div>
            </div>
         </div>
     </footer>
-
-    <script src="{% static 'js/index.js' %}"></script>
+    <script src="index.js"></script>
 </body>
 </html>
-
